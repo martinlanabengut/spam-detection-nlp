@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Models (large files)
+*.h5
+*.pkl
+*.joblib
+models/*.pkl
+
+# Data
+data/*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
