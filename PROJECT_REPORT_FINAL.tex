@@ -114,9 +114,49 @@ The methodology draws upon NLP theory (Jurafsky \& Martin, 2013) encompassing:
 
 \textbf{Classification:} Naive Bayes applies probabilistic Bayes' theorem assuming feature independence. Support Vector Machines find optimal hyperplanes separating classes in high-dimensional space.
 
-\subsection{Data Collection}
+\subsection{Data Collection and Dataset Description}
 
-The SMS Spam Collection dataset (UCI Repository, 5,572 messages) was selected for its manageable size, quality labeling, and real-world applicability. Distribution: 747 spam (13.4\%), 4,825 legitimate (86.6\%).
+\subsubsection{Dataset Selection}
+
+The SMS Spam Collection dataset was obtained from the UCI Machine Learning Repository (\url{https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection}). This publicly available dataset is widely used in spam detection research and provides a realistic benchmark for text classification systems.
+
+\subsubsection{Dataset Characteristics}
+
+\textbf{Source and Composition:} The dataset comprises 5,572 real SMS messages collected from multiple sources:
+\begin{itemize}
+    \item Grumbletext website (UK forum with public claims of SMS spam)
+    \item NUS SMS Corpus (National University of Singapore collection)
+    \item SMS Spam Corpus v.0.1 Big (Caroline Tag's PhD research)
+    \item Original messages contributed by the dataset creators
+\end{itemize}
+
+\textbf{Labeling:} Each message is manually labeled as either "spam" (unwanted promotional or fraudulent messages) or "ham" (legitimate personal communications). The manual labeling ensures high-quality ground truth for supervised learning.
+
+\textbf{Distribution:} 
+\begin{itemize}
+    \item Total messages: 5,572
+    \item Spam: 747 messages (13.4\%)
+    \item Ham (legitimate): 4,825 messages (86.6\%)
+    \item Imbalance ratio: 1:6.5
+\end{itemize}
+
+\textbf{Format:} Tab-separated text file with two columns: label and message content. File size: 467 KB.
+
+\textbf{Language:} English (primarily UK English with some international variations)
+
+\subsubsection{Dataset Suitability}
+
+This dataset was selected based on several criteria:
+\begin{itemize}
+    \item \textbf{Size:} Sufficient for robust model training without excessive computational requirements
+    \item \textbf{Quality:} Manual labeling by domain experts ensures accuracy
+    \item \textbf{Realism:} Actual SMS messages reflect real-world spam patterns
+    \item \textbf{Balance:} 13.4\% spam ratio realistic for production scenarios
+    \item \textbf{Accessibility:} Publicly available for reproducible research
+    \item \textbf{Standard benchmark:} Widely used, enabling comparison with prior work
+\end{itemize}
+
+\textbf{Dataset Citation:} Almeida, T.A., Hidalgo, J.M.G., Yamakami, A. (2011). Contributions to the Study of SMS Spam Filtering: New Collection and Results. Proceedings of the 2011 ACM Symposium on Document Engineering, Mountain View, CA, USA.
 
 % ============================================================================
 % 2. MAIN BODY (5-7 pages)
